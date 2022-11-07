@@ -6,6 +6,6 @@ COPY requirements.txt server/conf/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r server/conf/requirements.txt
 
-COPY requests /server
+COPY api /server
 
 CMD bash -c "while true; do sleep 1; done"

@@ -35,8 +35,8 @@ docker-compose exec api bash
 
 Start performing requests
  ```sh
-cd requests
-python session.py
+cd api
+python client.py
 ```
 
 
