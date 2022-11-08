@@ -7,14 +7,17 @@ from datetime import datetime
 class ZebrunnerApi:
     response = ["response", rq.Response]
 
-    def __init__(self):
-        self.project_name = "ALPHA"
-        self.access_token = None
-        self.media_type = {"content-type": "application/json"}
-        self.authorization = None
-        self.test_run_id = None
-        self._BASE_URL = "https://solvdinternal.zebrunner.com"
-        self.test_id = None
+    def __init__(self, project_name:str, access_token:str = None, media_type:str = {"content-type": "application/json"}, authorization = None, test_run_id = None, _BASE_URL:str = "https://solvdinternal.zebrunner.com", test_id = None):
+        self.project_name = project_name
+        self.access_token = access_token
+        self.media_type = media_type
+        self.authorization = authorization
+        self.test_run_id = test_run_id
+        self._BASE_URL = _BASE_URL
+        self.test_id = test_id
+
+    def getUrl(self):
+        return self._BASE_URL
 
     def get_access_token(self):
         URL = f"{self._BASE_URL}/api/iam/v1/auth/refresh"
