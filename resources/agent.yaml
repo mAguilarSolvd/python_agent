@@ -1,0 +1,13 @@
+reporting:
+  enabled: true
+  project-key: ALPHA
+  server:
+    hostname: https://solvdinternal.zebrunner.com
+    access-token: HP4v6PasVpPt6RG5Dm4ufeyBVRJPi6T3gaKyKrRCXvFxjI9ytN
+  run:
+    retry-known-issues: false
+    treat-skips-as-failures: false
+    test-case-status:
+      on-pass: passed
+      on-fail: failed
+      on-skip: retest
